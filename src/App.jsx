@@ -1,10 +1,9 @@
-import './App.css';
-import TopBar from './components/topmenu/TopBar';
+import Topbar from './components/topmenu/Topbar';
 
 export default function App() {
   return (
     <>
-    <TopBar/>
+    <Topbar/>
     </>
   );
 }
