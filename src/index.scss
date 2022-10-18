@@ -8,6 +8,10 @@ $mainColor: #15023a;
   box-sizing: border-box;
 }
 
+html {
+  font-size: 62.5%; // this defines what 1rem, in this case (62.5%) 1rem=10px  / 10px;16px = 62.5%
+}
+
 body {
   font-family: 'Roboto', sans-serif;
 }
