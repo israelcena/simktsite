@@ -1,8 +1,8 @@
-import "./topbar.scss"
+import "./topBar.scss"
 
 export default function TopBar() {
   return (
-    <div className="topbar">
+    <div className="topBar">
       <div className="wrapper">
         
       </div>
