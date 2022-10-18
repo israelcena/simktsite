@@ -1,4 +1,6 @@
-$mainColor: #15023a;
+$mainColor: #a128c4;
+$secondColor: #7ed957;
+$gray: #363430;
 
 *,
 *::after,
@@ -15,4 +17,5 @@ html {
 body {
   font-family: 'Roboto', sans-serif;
   font-size: 1.6rem;
+  color: $gray;
 }
