@@ -10,9 +10,7 @@ import "./app.scss"
 export default function App() {
   return (
     <div className='app'>
-      <header>
         <TopBar/>
-      </header>
       <section className='sections'>
         <main>
           <Intro/>
