@@ -1,11 +1,11 @@
 @import "../../../index.scss";
 
 .menu {
-  width: 28vw;
+  width: 30vw;
   height: 100vh;
   background-color: $gray;
   position: fixed;
-  top: 0;
+  top: 0rem;
   right: -30vw;
   z-index: -2;
   display: flex;
