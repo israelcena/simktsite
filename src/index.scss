@@ -12,6 +12,16 @@ $gray: #363430;
 
 html {
   font-size: 62.5%; // this defines what 1rem, in this case (62.5%) 1rem=10px  / 10px;16px = 62.5%
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+  scrollbar-width: none; //for firefox
+    &::-webkit-scrollbar {
+      display: none;
+    }
+}
+
+:target {
+  scroll-margin-top: 7rem;
 }
 
 body {
