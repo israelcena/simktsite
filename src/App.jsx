@@ -12,9 +12,7 @@ export default function App() {
     <div className='app'>
         <TopBar/>
       <section className='sections'>
-        <main>
-          <Intro/>
-        </main>
+        <Intro/>
         <Portfolio/>
         <Works/>
         <Testimonials/>
