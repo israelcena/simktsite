@@ -4,6 +4,28 @@ $tertiaryColor: #e74c3c;
 $gray: #363430;
 $defaultTransition: all .5s ease;
 
+//fix for float and others
+@mixin clearfix {
+  &::after {
+      content: "";
+      display: table;
+      clear: both;
+  }
+}
+
+@mixin absCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 *,
 *::after,
 *::before {
