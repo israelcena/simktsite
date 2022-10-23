@@ -11,13 +11,13 @@ export default function App() {
   return (
     <div className='app'>
         <TopBar/>
-      <section className='sections'>
+      <div className='sections'>
         <Intro/>
         <Portfolio/>
         <Works/>
         <Testimonials/>
         <Contact/>
-      </section>
+      </div>
     </div>
   );
 }

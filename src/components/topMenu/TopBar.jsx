@@ -10,7 +10,7 @@ import Menu from "./menu/Menu";
 export default function TopBar() {
   const [isTextChanged, setIsTextChanged] = useToggle();
   return (
-    <div className={isTextChanged ? 'topBar active' : 'topBar'}>
+    <nav className={isTextChanged ? 'topBar active' : 'topBar'}>
       <div className="wrapper">
         <div className="left">
           <a href="#intro" className="logo">
@@ -39,7 +39,7 @@ export default function TopBar() {
       <div onClick={setIsTextChanged}>
         <Menu toggler={isTextChanged}/>  
       </div>
-    </div>
+    </nav>
   )
 }
 
