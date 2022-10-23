@@ -1,0 +1,38 @@
+@import "../../index.scss";
+
+.works {
+  background-color: $tertiaryColor;
+  @include flexCenter;  
+  position: relative;
+
+  .slider {
+    height: 70vh;
+    display: flex;
+    position: absolute;
+    left: 0;
+    transition: $slowlyTransition;
+
+    .container {
+      width: 100vw;
+      @include flexCenter;  
+    }
+
+  }
+
+  .arrow {
+    position: absolute;
+    cursor: pointer;
+    color: whitesmoke;
+    z-index: 2;
+
+    font-size: 6rem;
+
+    &.left {
+      left: 7%;
+    }
+
+    &.right {
+      right: 7%;
+    }
+  }
+}

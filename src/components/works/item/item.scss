@@ -1,0 +1,69 @@
+@import "../../../index.scss";
+
+.works__item {
+  width: 70%;
+  height: 100%;
+  background-color: whitesmoke;
+  border-radius: 3rem;
+  @include flexCenter;
+
+  &:nth-child(n) {
+    overflow: hidden;
+  }
+
+  .left {
+    flex: 4;
+    height: 100%;
+    @include flexCenter;
+
+    .leftContainer{
+      max-width: 35rem;
+      padding: 2.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+
+      .iconContainer {
+        height: 6rem;
+        width: 6rem;
+        @include flexCenter;
+        font-size: 4.5rem;
+        background-color: $secondColor;
+        border-radius: 50%;
+      }
+
+      h3 {
+        font-size: 2.5rem;
+      }
+
+      p {
+        font-size: 1.5rem;
+      }
+
+      span {
+        font-style: italic;
+        font-weight: 600;
+        cursor: pointer;
+        text-decoration: none;
+
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+    }
+
+  } 
+  
+  .right {
+    flex: 8;
+    height: 100%;
+    @include flexCenter;
+
+    img {
+      width: 40rem;
+      transform: rotate(-10deg);
+      object-fit: contain;
+    }
+  }
+
+}
