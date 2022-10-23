@@ -1,0 +1,46 @@
+@import "../../../index.scss";
+
+.container__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid $secondColor;
+  border-radius: 1rem;
+  gap: 1.5rem;
+  position: relative;
+  overflow: hidden;
+  transition: $defaultTransition;
+
+  h3 {
+    text-align: center;
+    font-size: 3rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(0%);
+    color: transparent;
+    transition: $defaultTransition;
+    
+  }
+
+  &:hover {
+    cursor: pointer;
+    background-color: $mainColor;
+
+    h3 {
+      color: whitesmoke;
+      transform: translateY(-50%);
+      
+    }
+
+    img {
+      opacity: 0.2;
+    }
+  }
+
+  img {
+    height: 20rem;
+    object-fit: cover;
+    z-index: 1;
+    transition: $defaultTransition;
+  }
+}
