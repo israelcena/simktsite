@@ -13,7 +13,7 @@ import "./portfolio.scss"
 
 export default function Portfolio() {
 
-  const [selected ,setSelected] = useState("branding");
+  const [selected ,setSelected] = useState("webApp");
   const [data, setData] = useState([]);
 
   const list = [
