@@ -14,9 +14,7 @@
       margin-top: 5.5rem;
       background-color: $secondColor;
       border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      @include flexCenter;
       float: right;
 
       img {
@@ -88,7 +86,6 @@
       position: absolute;
       bottom: 0;
       left: 50%;
-      // transform: translateX(-100%);
       font-size: 6rem;
       animation: arrowBlink 1.8s infinite;
       

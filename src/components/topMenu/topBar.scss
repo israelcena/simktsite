@@ -24,8 +24,7 @@
     }
 
     .center {
-      display: flex;
-      align-items: center;
+      @include flexCenter;
       gap: 2rem;
       
       .item-container {

@@ -2,9 +2,8 @@
 
 .portfolio {
   background-color: whitesmoke;
-  display: flex;
+  @include flexCenter;
   flex-direction: column;
-  align-items: center;
 
   h1 {
     font-size: 5rem;
@@ -19,9 +18,7 @@
 
   .container {
     width: 70%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flexCenter;
     flex-wrap: wrap;
     gap: 2rem;
   }

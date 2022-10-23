@@ -8,17 +8,15 @@
   top: 0rem;
   right: -30vw;
   z-index: -2;
-  display: flex;
+  @include flexCenter;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   transition: all 1s ease;
 
   ul {
     font-size: 4rem;
     color: whitesmoke;
     width: 88%;
-    
+
     li {
       font-weight: 500;
     }
