@@ -1,9 +1,15 @@
+// vars
+// colors
 $mainColor: #a128c4;
 $secondColor: #7ed957;
 $tertiaryColor: #e74c3c;
 $gray: #363430;
-$defaultTransition: all .5s ease;
 
+// transitions
+$defaultTransition: all .5s ease;
+$slowlyTransition: all 1s ease;
+
+// mixins
 //fix for float and others
 @mixin clearfix {
   &::after {

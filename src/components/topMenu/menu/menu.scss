@@ -10,7 +10,7 @@
   z-index: -2;
   @include flexCenter;
   flex-direction: column;
-  transition: all 1s ease;
+  transition: $slowlyTransition;
 
   ul {
     font-size: 4rem;
