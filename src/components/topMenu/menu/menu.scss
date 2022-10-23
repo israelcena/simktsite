@@ -18,6 +18,10 @@
     font-size: 4rem;
     color: whitesmoke;
     width: 88%;
+    
+    li {
+      font-weight: 500;
+    }
 
     :not(:last-child) {
       margin-bottom: 2.5rem;
