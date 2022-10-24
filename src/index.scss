@@ -9,6 +9,9 @@ $gray: #363430;
 $defaultTransition: all .5s ease;
 $slowlyTransition: all 1s ease;
 
+// shadows
+$defaultBoxShadow: 0px 0px 15px -8px black;
+
 // mixins
 //fix for float and others
 @mixin clearfix {
