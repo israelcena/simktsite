@@ -5,7 +5,6 @@
   flex-direction: column;
   border: 1px solid $secondColor;
   border-radius: 1rem;
-  gap: 1.5rem;
   position: relative;
   overflow: hidden;
   transition: $defaultTransition;
@@ -36,7 +35,7 @@
   }
 
   img {
-    height: 20rem;
+    height: 18rem;
     object-fit: cover;
     z-index: 1;
     transition: $defaultTransition;
