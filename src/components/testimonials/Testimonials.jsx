@@ -38,8 +38,6 @@ export default function Testimonials() {
       desc:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat magnam dolorem",
     },
-    
-    
   ];
 
   return (
