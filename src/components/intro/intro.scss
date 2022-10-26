@@ -11,7 +11,7 @@
     .imgContainer {
       height: 85.5rem;
       width: 85.5rem;
-      margin-top: 5.5rem;
+      margin-top: 1rem;
       background-color: $secondColor;
       border-radius: 50%;
       @include flexCenter;
@@ -19,7 +19,7 @@
 
       img {
         height: 100%;
-        transform: translateY(1%);
+        // transform: translateY(1%);
       }
     }
   }
