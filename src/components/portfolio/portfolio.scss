@@ -2,17 +2,14 @@
 
 .portfolio {
   background-color: whitesmoke;
-  @include flexCenter;
+  display: flex;
+  align-items: center;
   flex-direction: column;
-
-  h1 {
-    font-size: 5rem;
-    margin: .5rem;
-  }
+  gap: $defaultGap;
 
   ul {
     display: flex;
-    gap: 2.5rem;
+    gap: $hugeGap;
     margin-bottom: 2.5rem;
   }
 
@@ -20,6 +17,6 @@
     width: 70%;
     @include flexCenter;
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: $defaultGap;
   }
 }

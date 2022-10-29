@@ -26,11 +26,11 @@
 
     .center {
       @include flexCenter;
-      gap: 2rem;
+      gap: $hugeGap;
       
       .item-container {
         display: flex;
-        gap: 1rem;
+        gap: $defaultGap;
         position: relative;
         font-weight: 300;
 
