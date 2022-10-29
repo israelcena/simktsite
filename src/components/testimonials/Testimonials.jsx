@@ -42,7 +42,7 @@ export default function Testimonials() {
 
   return (
     <section className="testimonials" id="testimonials">
-      <h1>Depoimentos</h1>
+      <h2>Depoimentos</h2>
       <div className="container">
         {data.map(d=>(
           <div key={d.id} className={d.featured ? "card featured" : "card"}>

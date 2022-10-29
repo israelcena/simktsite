@@ -63,7 +63,7 @@ export default function Portfolio() {
 
   return (
     <section className="portfolio" id="portfolio">
-      <h1>Portifólio</h1>
+      <h2>Portifólio</h2>
       <ul>
         {list.map(item => (
             <List 
