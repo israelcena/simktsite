@@ -11,6 +11,11 @@ $slowlyTransition: all 1s ease;
 
 // shadows
 $defaultBoxShadow: 0px 0px 15px -8px black;
+$heavyBoxShadow: 0 1rem 2rem rgba(black, 0.1);
+
+// spacing
+$defaultGap: 1.5rem;
+$hugeGap: 2.5rem;
 
 // mixins
 //fix for float and others
@@ -70,4 +75,17 @@ ul {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+h2 {
+  margin-top: 1rem;
+  font-size: 5rem;
+}
+
+button {
+  font-family: inherit;
+}
+
+textarea {
+  font-family: inherit;
 }
