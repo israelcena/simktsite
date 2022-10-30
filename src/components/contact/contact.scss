@@ -1,0 +1,77 @@
+@import "../../index.scss";
+
+.contact {
+  display: flex;
+  background-color: whitesmoke;
+
+  .left {
+    flex: 1;
+    @include flexCenter;
+    overflow: hidden;
+    object-fit: fill;
+
+    img {
+      height: 100%;
+    }
+  }
+
+  .right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: $defaultGap;
+    flex-direction: column;
+
+    form {
+      @include flexCenter;
+      flex-direction: column;
+      gap: 1rem;
+      
+      :nth-child(n) {
+        font-size: 1.5rem;
+      }
+
+      > :focus {
+        outline: none;
+        box-shadow: $heavyBoxShadow;
+        border-bottom: 3px solid green;
+      }
+
+      > :focus:invalid {
+        border-bottom: 3px solid rgba(255, 0, 0, 0.527);
+      }
+
+      > ::-webkit-input-placeholder {
+        color: $gray;
+      }
+
+      input, textarea {
+        width: 40vw;
+        padding: 2rem 1rem;
+        border: none;
+        border-bottom: 3px solid transparent;
+        transition: $defaultTransition;
+      }
+
+      input {
+        height: 3rem;
+      }
+
+      textarea {
+        resize: none;
+      }
+
+      button {
+        margin-top: 1rem;
+        cursor: pointer;
+        width: 15rem;
+        height: 3rem;
+        color: whitesmoke;
+        font-weight: 500;
+        background-color: $mainColor;
+        border: none;
+        border-radius: 0.75rem;
+      }
+    }
+  }
+}
