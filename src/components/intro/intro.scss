@@ -7,6 +7,7 @@
     flex: 0.55;
     user-select: none;
     overflow: hidden;
+    position: relative;
 
     .imgContainer {
       height: 85.5rem;
@@ -18,8 +19,9 @@
       float: right;
 
       img {
+        position: absolute;
+        bottom: 0;
         height: 100%;
-        // transform: translateY(1%);
       }
     }
   }
@@ -42,44 +44,48 @@
         margin: 1rem 0;
         letter-spacing: 2px;
       }
+
       h2 {
         font-size: 3.5rem;
         letter-spacing: 1.5px;
       }
+
       h3 {
         font-size: 3rem;
-        letter-spacing: .5px;
+        letter-spacing: 0.5px;
+
         span {
           color: $mainColor;
           font-weight: 800;
           font-size: inherit;
         }
-      .ityped-cursor {
+        
+        .ityped-cursor {
           font-size: 2.2rem;
           opacity: 1;
           -webkit-animation: blink 0.3s infinite;
           -moz-animation: blink 0.3s infinite;
           animation: blink 0.3s infinite;
           animation-direction: alternate;
-      }
-       
-      @keyframes blink {
+        }
+
+        @keyframes blink {
           100% {
-              opacity: 0;
+            opacity: 0;
           }
-      }
-       
-      @-webkit-keyframes blink {
+        }
+
+        @-webkit-keyframes blink {
           100% {
-              opacity: 0;
+            opacity: 0;
           }
-      }
-       
-      @-moz-keyframes blink {
+        }
+
+        @-moz-keyframes blink {
           100% {
-              opacity: 0;
+            opacity: 0;
           }
-      }
+        }
       }
     }
 
@@ -89,7 +95,7 @@
       left: 40%;
       font-size: 6rem;
       animation: arrowBlink 1.8s infinite;
-      
+
       @keyframes arrowBlink {
         100% {
           opacity: 0;
