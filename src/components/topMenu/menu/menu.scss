@@ -13,12 +13,16 @@
   transition: $slowlyTransition;
 
   ul {
-    font-size: 4rem;
-    color: whitesmoke;
+    font-size: 3rem;
     width: 88%;
+    transform: translateY(-15%);
 
     li {
-      font-weight: 500;
+      margin-left: 2rem;
+
+      &:hover {
+        filter: brightness(1);
+      }
     }
 
     :not(:last-child) {
@@ -30,5 +34,4 @@
     right: 0;
     background-color: $mainColor;
   }
-
 }
