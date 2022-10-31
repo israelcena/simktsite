@@ -4,7 +4,7 @@ import ToggleMenu from "./toggleMenu/ToggleMenu";
 import { useCallback, useState } from "react";
 
 import "./topBar.scss";
-import logoImage from "../../images/logo.png";
+import logoImage from "../../images/logoredondo.svg";
 import Menu from "./menu/Menu";
 
 export default function TopBar() {
