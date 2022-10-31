@@ -1,20 +1,21 @@
-import {BsWhatsapp} from "react-icons/bs";
-import {BsMailbox} from "react-icons/bs";
-import ToggleMenu from './toggleMenu/ToggleMenu';
-import { useCallback, useState } from 'react';
+import { BsWhatsapp } from "react-icons/bs";
+import { BsMailbox } from "react-icons/bs";
+import ToggleMenu from "./toggleMenu/ToggleMenu";
+import { useCallback, useState } from "react";
 
-import "./topBar.scss"
-import logoImage from "../../images/logo.svg"
+import "./topBar.scss";
+import logoImage from "../../images/logo.png";
 import Menu from "./menu/Menu";
 
 export default function TopBar() {
   const [isTextChanged, setIsTextChanged] = useToggle();
+  
   return (
-    <nav className={isTextChanged ? 'topBar active' : 'topBar'}>
+    <nav className={isTextChanged ? "topBar active" : "topBar"}>
       <div className="wrapper">
         <div className="left">
           <a href="#intro" className="logo">
-            <img src={logoImage} alt="Logo SI Marketing"/>
+            <img src={logoImage} alt="Logo SI Marketing" />
           </a>
         </div>
 
@@ -22,11 +23,11 @@ export default function TopBar() {
           <h1 className="text-logo">Agência Digital</h1>
           <div className="items">
             <div className="item-container">
-              <BsWhatsapp className="icon"/>
+              <BsWhatsapp className="icon" />
               <span>22 98803-7449</span>
             </div>
             <div className="item-container">
-              <BsMailbox className="icon"/>
+              <BsMailbox className="icon" />
               <span>israelsjm@gmail.com</span>
             </div>
           </div>
@@ -37,19 +38,19 @@ export default function TopBar() {
         </div>
       </div>
       <div onClick={setIsTextChanged}>
-        <Menu toggler={isTextChanged}/>  
+        <Menu toggler={isTextChanged} />
       </div>
     </nav>
-  )
+  );
 }
 
 const useToggle = (initialState = false) => {
   // Initialize the state
   const [state, setState] = useState(initialState);
-  
+
   // Define and memorize toggler function in case we pass down the component,
   // This function change the boolean value to it's opposite value
-  const toggle = useCallback(() => setState(state => !state), []);
-  
-  return [state, toggle]
-}
+  const toggle = useCallback(() => setState((state) => !state), []);
+
+  return [state, toggle];
+};
