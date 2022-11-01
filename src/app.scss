@@ -1,9 +1,10 @@
+@import "./index.scss";
+
 .app {
   height: 100vh;
     
   .sections {
     width: 100%;
-    // height: calc(100vh - 7rem);
     position: relative;
     top: 7rem;
 
@@ -11,7 +12,10 @@
       height: calc(100vh - 7rem);
       scroll-margin-top: 7rem;
       scroll-snap-align: start;
-
+      @include tab{
+        height: 100vh;
+        scroll-margin-top: 0;
+      }
     }
 
   }

@@ -60,11 +60,6 @@ html {
 
 :target {
   scroll-margin-top: 7rem;
-
-  @media (max-width: 768px) {
-    scroll-margin-top: 0;
-  }
-  
 }
 
 body {
@@ -97,9 +92,10 @@ textarea {
 
 // media queries
 $tab: 768px;
+$phone: 468;
 
 @mixin tab {
   @media (max-width: #{$tab}) {
-    @content
+    @content;
   }
 }
