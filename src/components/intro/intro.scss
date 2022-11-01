@@ -3,11 +3,21 @@
 .intro {
   display: flex;
 
+  @include tab {
+    position: relative;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
   .left {
     flex: 0.55;
     user-select: none;
     overflow: hidden;
     position: relative;
+
+    @include tab {
+      align-items: flex-start;
+    }
 
     .imgContainer {
       height: 85.5rem;
@@ -18,10 +28,20 @@
       @include flexCenter;
       float: right;
 
+      @include tab {
+        height: 70rem;
+        width: 70rem;
+      }
+
       img {
         position: absolute;
         bottom: 0;
         height: 100%;
+
+        @include tab {
+          position: relative;
+          // height: 50%;
+        }
       }
     }
   }
@@ -29,6 +49,11 @@
   .right {
     flex: 0.45;
     position: relative;
+
+    @include tab {
+      position: static;
+      // top: 7rem;
+    }
 
     .wrapper {
       width: 100%;
@@ -38,11 +63,20 @@
       flex-direction: column;
       justify-content: center;
 
+      @include tab {
+        padding-left: 0;
+        align-items: center;
+      }
+
       h1 {
         font-size: 6rem;
         font-weight: 800;
         margin: 1rem 0;
         letter-spacing: 2px;
+
+        @include tab {
+          font-size: 4rem;
+        }
       }
 
       h2 {
@@ -54,12 +88,16 @@
         font-size: 3rem;
         letter-spacing: 0.5px;
 
+        @include tab {
+          font-size: 4rem;
+        }
+
         span {
           color: $mainColor;
           font-weight: 800;
           font-size: inherit;
         }
-        
+
         .ityped-cursor {
           font-size: 2.2rem;
           opacity: 1;
@@ -95,6 +133,10 @@
       left: 40%;
       font-size: 6rem;
       animation: arrowBlink 1.8s infinite;
+      @include tab {
+        bottom: 55%;
+        left: 48%;
+      }
 
       @keyframes arrowBlink {
         100% {
