@@ -6,7 +6,7 @@ $tertiaryColor: #e74c3c;
 $gray: #363430;
 
 // transitions
-$defaultTransition: all .5s ease;
+$defaultTransition: all 0.5s ease;
 $slowlyTransition: all 1s ease;
 
 // shadows
@@ -18,12 +18,12 @@ $defaultGap: 1.5rem;
 $hugeGap: 2.5rem;
 
 // mixins
-//fix for float and others
 @mixin clearfix {
+  //fix for float and others
   &::after {
-      content: "";
-      display: table;
-      clear: both;
+    content: "";
+    display: table;
+    clear: both;
   }
 }
 
@@ -53,17 +53,22 @@ html {
   scroll-behavior: smooth;
   scroll-snap-type: y mandatory;
   scrollbar-width: none; //for firefox
-    &::-webkit-scrollbar {
-      display: none;
-    }
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 :target {
   scroll-margin-top: 7rem;
+
+  @media (max-width: 768px) {
+    scroll-margin-top: 0;
+  }
+  
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 1.6rem;
   color: $gray;
 }
@@ -88,4 +93,13 @@ button {
 
 textarea {
   font-family: inherit;
+}
+
+// media queries
+$tab: 768px;
+
+@mixin tab {
+  @media (max-width: #{$tab}) {
+    @content
+  }
 }
