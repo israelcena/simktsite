@@ -2,7 +2,6 @@
 
 .intro {
   display: flex;
-
   @include tab {
     position: relative;
     flex-direction: column-reverse;
@@ -16,7 +15,6 @@
     user-select: none;
     overflow: hidden;
     position: relative;
-
     @include tab {
       align-items: flex-start;
     }
@@ -29,7 +27,6 @@
       border-radius: 50%;
       @include flexCenter;
       float: right;
-
       @include tab {
         height: 70rem;
         width: 70rem;
@@ -39,10 +36,12 @@
         position: absolute;
         bottom: 0;
         height: 100%;
-
         @include tab {
           position: relative;
           // height: 50%;
+        }
+        @include miniPhone {
+          bottom: 6rem;
         }
       }
     }
@@ -51,10 +50,8 @@
   .right {
     flex: 0.45;
     position: relative;
-
     @include tab {
       position: static;
-      // top: 7rem;
     }
 
     .wrapper {
@@ -71,6 +68,11 @@
       @include phone {
         padding: 1rem;
         padding-top: 2rem;
+        justify-content: flex-start;
+        align-items: center;
+      }
+      @include miniPhone {
+        padding: 1rem;
         justify-content: flex-start;
         align-items: center;
       }
@@ -91,12 +93,16 @@
       h2 {
         font-size: 3.5rem;
         letter-spacing: 1.5px;
+        @include miniPhone {
+          margin: 0;
+          font-size: 2.5rem;
+          letter-spacing: 0.5px;
+        }
       }
 
       h3 {
         font-size: 3rem;
         letter-spacing: 0.5px;
-
         @include tab {
           font-size: 4rem;
         }
@@ -156,6 +162,10 @@
         left: 48%;
       }
       @include phone {
+        font-size: 4rem;
+      }
+      @include miniPhone {
+        bottom: 52%;
         font-size: 4rem;
       }
 
