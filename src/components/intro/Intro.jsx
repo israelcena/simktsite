@@ -1,6 +1,6 @@
 import "./intro.scss";
 import mainImage from "../../images/salesperson.png";
-import miniMainImage from "../../images/salespersonsm.png";
+// import miniMainImage from "../../images/salespersonsm.png";
 import { IoIosArrowDown } from "react-icons/io";
 import { init } from "ityped";
 import { useEffect, useRef } from "react";
