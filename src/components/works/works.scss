@@ -13,6 +13,9 @@
     left: 0;
     overflow: hidden;
     transition: $slowlyTransition;
+    @include tab {
+      height: 80vh;
+    }
 
     .container {
       width: 100vw;
@@ -31,10 +34,16 @@
 
     &.left {
       left: 7%;
+      @include tab {
+        left: 2%;
+      }
     }
 
     &.right {
       right: 7%;
+      @include tab {
+        right: 2%;
+      }
     }
   }
 }
