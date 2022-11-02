@@ -30,6 +30,9 @@
         align-items: center;
         text-align: center;
       }
+      @include miniPhone {
+        gap: $phoneGap;
+      }
 
       .iconContainer {
         height: 6rem;
