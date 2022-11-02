@@ -11,6 +11,9 @@
     height: 100%;
     @include flexCenter;
     gap: $defaultGap;
+    @include phone{
+      gap: 3rem;
+    }
 
     .card {
       width: 25rem;
@@ -18,15 +21,24 @@
       display: flex;
       flex-direction: column;
       justify-content: space-around;
+      @include phone{
+        height: 80%;
+      }
       
       border-radius: 1rem;
       box-shadow: $defaultBoxShadow;
       padding: 2rem;
+      @include phone{
+        padding: 1rem;
+      }
       transition: $slowlyTransition;
 
       &.featured {
         width: 30rem;
         height: 75%;
+        @include phone{
+          height: 90%;
+        }
       }
 
       .top {
