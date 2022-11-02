@@ -1,5 +1,5 @@
 import { useState } from "react";
-import contactImage from "../../images/contactPhoto/contact.jpg"
+import contactImage from "../../images/contactPhoto/contact.jpg";
 import "./contact.scss";
 
 export default function Contact() {
@@ -12,7 +12,7 @@ export default function Contact() {
   return (
     <section className="contact" id="contact">
       <div className="left">
-        <img src={contactImage} alt="Contato"/>
+        <img src={contactImage} alt="Contato" />
       </div>
       <div className="right">
         <h2>Contato</h2>
@@ -46,13 +46,13 @@ export default function Contact() {
             required
           ></textarea>
           <button type="submit">Enviar</button>
-          {message && (
+          {message ? (
             <span>
               Obrigado pelo contato!
               <br />
               Em breve retonaremos.
             </span>
-          )}
+          ) : null}
         </form>
       </div>
     </section>
