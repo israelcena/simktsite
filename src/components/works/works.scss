@@ -5,6 +5,7 @@
   @include flexCenter;  
   position: relative;
   overflow: hidden;
+  
 
   .slider {
     height: 70vh;
@@ -15,6 +16,9 @@
     transition: $slowlyTransition;
     @include tab {
       height: 80vh;
+    }
+    @include phone {
+      height: 86vh;
     }
 
     .container {
@@ -29,20 +33,22 @@
     cursor: pointer;
     color: whitesmoke;
     z-index: 2;
-
-    font-size: 6rem;
+    font-size: 5rem;
+    // @include phone {
+    //   top: 2%;
+    // }
 
     &.left {
       left: 7%;
       @include tab {
-        left: 2%;
+        left: 1.5%;
       }
     }
 
     &.right {
       right: 7%;
       @include tab {
-        right: 2%;
+        right: 1.5%;
       }
     }
   }

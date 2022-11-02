@@ -6,6 +6,9 @@
   background-color: whitesmoke;
   border-radius: 3rem;
   @include flexCenter;
+  @include tab {
+    flex-direction: column;
+  }
 
   &:nth-child(n) {
     overflow: hidden;
@@ -22,6 +25,11 @@
       display: flex;
       flex-direction: column;
       gap: $hugeGap;
+      @include tab {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
 
       .iconContainer {
         height: 6rem;
@@ -58,11 +66,29 @@
     flex: 8;
     height: 100%;
     @include flexCenter;
+    @include tab {
+      max-width: 32rem;
+    }
+    @include phone {
+      max-width: 20rem;
+      align-items: flex-start;
+    }
 
     img {
       width: 40rem;
       transform: rotate(-10deg);
       object-fit: contain;
+      @include tab {
+        width: 100%;
+      }
+      @include phone {
+        max-width: 20rem;
+        transform: rotate(-5deg);
+      }
+      @include miniPhone {
+        max-width: 16rem;
+      }
+     
     }
   }
 

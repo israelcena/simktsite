@@ -16,7 +16,7 @@ export default function Item({image, icon, title, description}) {
       <div className="right">
         <img
           src={image}
-          alt=""/>
+          alt={description}/>
       </div>
     </div>
   )
