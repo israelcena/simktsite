@@ -9,6 +9,9 @@
     font-size: 2.25rem;
   }
   @include phone {
+    font-size: 2rem;
+  }
+  @include miniPhone {
     font-size: 1.5rem;
   }
     &.active {
