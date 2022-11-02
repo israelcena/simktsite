@@ -81,6 +81,13 @@ a {
 h2 {
   margin-top: 1rem;
   font-size: 5rem;
+  @media (max-width: 768px) {
+    margin-top: 2rem;
+  }
+  @media (max-width: 468px) {
+    margin-top: 1rem;
+    font-size: 4rem;
+  }
 }
 
 button {
@@ -93,10 +100,23 @@ textarea {
 
 // media queries
 $tab: 768px;
-$phone: 468;
+$phone: 468px;
+$miniPhone: 375px;
 
 @mixin tab {
   @media (max-width: #{$tab}) {
+    @content;
+  }
+}
+
+@mixin phone {
+  @media (max-width: #{$phone}) {
+    @content;
+  }
+}
+
+@mixin miniPhone {
+  @media (max-width: #{$miniPhone}) {
     @content;
   }
 }
