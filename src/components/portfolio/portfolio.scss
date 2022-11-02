@@ -22,11 +22,10 @@
     }
     @include miniPhone {
       gap: $phoneGap;
-      margin-bottom: .5rem;
+      margin-bottom: 0.5rem;
       align-items: center;
       justify-content: center;
     }
-    
   }
 
   .container {
@@ -34,13 +33,11 @@
     @include flexCenter;
     flex-wrap: wrap;
     gap: $defaultGap;
-
     @include tab {
       gap: $defaultGap;
     }
-
     @include phone {
-      width: 100%;
+      width: 90%;
       gap: $phoneGap;
     }
   }

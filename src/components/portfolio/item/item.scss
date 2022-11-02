@@ -19,8 +19,8 @@
     max-width: 16rem;
   }
   @include miniPhone {
-    height: 10rem;
-    max-width: 10rem;
+    height: 12rem;
+    max-width: 12rem;
   }
 
   h3 {
@@ -31,6 +31,12 @@
     transform: translateY(0%);
     color: transparent;
     transition: $defaultTransition;
+    @include phone {
+      font-size: 2rem;
+    }
+    @include miniPhone {
+      font-size: 1.75rem;
+    }
   }
 
   &:hover {
@@ -40,9 +46,6 @@
     h3 {
       color: whitesmoke;
       transform: translateY(-50%);
-      @include phone {
-        font-size: 2rem;
-      }
     }
 
     img {
