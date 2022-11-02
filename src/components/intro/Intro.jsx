@@ -1,5 +1,6 @@
 import "./intro.scss";
 import mainImage from "../../images/salesperson.png";
+import miniMainImage from "../../images/salespersonsm.png";
 import { IoIosArrowDown } from "react-icons/io";
 import { init } from "ityped";
 import { useEffect, useRef } from "react";
@@ -16,8 +17,8 @@ export default function Intro() {
         "redes sociais.",
         "sistemas internos.",
         "sistemas externos.",
-        "campanhas de marketing.",
-        "público alvo",
+        "marketing.",
+        "público alvo.",
       ],
     });
   }, []);
