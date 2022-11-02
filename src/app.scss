@@ -12,10 +12,6 @@
       height: calc(100vh - 7rem);
       scroll-margin-top: 7rem;
       scroll-snap-align: start;
-      @include tab{
-        height: 100vh;
-        scroll-margin-top: 0;
-      }
     }
 
   }
