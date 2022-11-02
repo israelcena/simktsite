@@ -4,12 +4,14 @@
   background-color: $tertiaryColor;
   @include flexCenter;  
   position: relative;
+  overflow: hidden;
 
   .slider {
     height: 70vh;
     display: flex;
     position: absolute;
     left: 0;
+    overflow: hidden;
     transition: $slowlyTransition;
 
     .container {
