@@ -18,10 +18,10 @@
     height: 16rem;
     max-width: 16rem;
   }
-  // @include miniPhone {
-  //   height: 12rem;
-  //   max-width: 12rem;
-  // }
+  @include miniPhone {
+    height: 14rem;
+    max-width: 14rem;
+  }
 
   h3 {
     text-align: center;
