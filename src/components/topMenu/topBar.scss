@@ -20,10 +20,17 @@
       justify-content: space-around;
       padding: 0.5rem 0;
     }
+    @include miniPhone{
+      justify-content: space-around;
+      padding: 1rem 0;
+    }
 
     .left {
       img {
         height: 6rem;
+        @include miniPhone{
+          height: 5rem;
+        }
       }
     }
 
