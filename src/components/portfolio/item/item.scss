@@ -8,12 +8,19 @@
   position: relative;
   overflow: hidden;
   transition: $defaultTransition;
+  max-width: 20.5rem;
+  height: 20.5rem;
+
   @include tab {
     max-width: 26rem;
   }
   @include phone {
     height: 16rem;
     max-width: 16rem;
+  }
+  @include miniPhone {
+    height: 10rem;
+    max-width: 10rem;
   }
 
   h3 {
@@ -44,12 +51,9 @@
   }
 
   img {
-    height: 18rem;
+    height: 100%;
     object-fit: contain;
     z-index: 1;
     transition: $defaultTransition;
-    @include phone {
-      height: 100%;
-    }
   }
 }
