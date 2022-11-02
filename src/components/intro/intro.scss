@@ -64,9 +64,14 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-
       @include tab {
         padding-left: 0;
+        align-items: center;
+      }
+      @include phone {
+        padding: 1rem;
+        padding-top: 2rem;
+        justify-content: flex-start;
         align-items: center;
       }
 
@@ -75,9 +80,11 @@
         font-weight: 800;
         margin: 1rem 0;
         letter-spacing: 2px;
-
         @include tab {
           font-size: 4rem;
+        }
+        @include phone {
+          font-size: 3rem;
         }
       }
 
@@ -93,11 +100,20 @@
         @include tab {
           font-size: 4rem;
         }
+        @include phone {
+          font-size: 2.5rem;
+        }
 
         span {
           color: $mainColor;
           font-weight: 800;
           font-size: inherit;
+          @include phone {
+            &:nth-child(2n) {
+              position: absolute;
+              display: block;
+            }
+          }
         }
 
         .ityped-cursor {
@@ -138,6 +154,9 @@
       @include tab {
         bottom: 55%;
         left: 48%;
+      }
+      @include phone {
+        font-size: 4rem;
       }
 
       @keyframes arrowBlink {
