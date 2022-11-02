@@ -16,6 +16,10 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @include phone {
+      justify-content: space-around;
+      padding: .5rem 0;
+    }
 
     .left {
       img {
@@ -47,6 +51,9 @@
         font-size: 3.5rem;
         text-decoration: none;
         font-style: italic;
+        @include phone {
+          display: none;
+        }
       }
     }
   }
