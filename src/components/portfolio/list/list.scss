@@ -11,11 +11,6 @@
   @include phone {
     font-size: 1.5rem;
   }
-  @include miniPhone {
-    font-size: 1.4rem;
-    padding: .15rem .6rem;
-  }
-
     &.active {
       background-color: $mainColor;
       color: whitesmoke;
