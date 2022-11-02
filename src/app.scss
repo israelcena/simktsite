@@ -9,6 +9,7 @@
     top: 7rem;
 
     > * {
+      overflow: hidden;
       height: calc(100vh - 7rem);
       scroll-margin-top: 7rem;
       scroll-snap-align: start;

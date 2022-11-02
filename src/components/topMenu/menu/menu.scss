@@ -11,6 +11,18 @@
   @include flexCenter;
   flex-direction: column;
   transition: $slowlyTransition;
+  @include tab {
+    width: 40vw;
+    right: -40vw;
+  }
+  @include phone {
+    width: 55vw;
+    right: -55vw;
+  }
+  @include miniPhone {
+    width: 60vw;
+    right: -60vw;
+  }
 
   ul {
     font-size: 3rem;
@@ -20,6 +32,9 @@
     li {
       margin-left: 2rem;
       color: whitesmoke;
+      @include phone {
+        margin-left: 1rem;
+      }
       &:hover {
         filter: brightness(1);
       }
