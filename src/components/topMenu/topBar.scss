@@ -5,20 +5,20 @@
   height: 7rem;
   background-color: $gray;
   color: whitesmoke;
-  position: fixed;    
+  position: fixed;
   top: 0;
   z-index: 3;
   transition: $slowlyTransition;
 
   .wrapper {
     margin: 0 auto;
-    padding: .25rem 6rem;
+    padding: 0.25rem 6rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
     @include phone {
       justify-content: space-around;
-      padding: .5rem 0;
+      padding: 0.5rem 0;
     }
 
     .left {
@@ -30,7 +30,7 @@
     .center {
       @include flexCenter;
       gap: $hugeGap;
-      
+
       .item-container {
         display: flex;
         gap: $defaultGap;
@@ -43,7 +43,7 @@
         }
 
         span {
-          white-space:nowrap;
+          white-space: nowrap;
         }
       }
 
@@ -58,7 +58,7 @@
     }
   }
 
-  &.active{
+  &.active {
     background-color: $mainColor;
     color: whitesmoke;
   }
