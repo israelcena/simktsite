@@ -6,11 +6,27 @@
   align-items: center;
   flex-direction: column;
   gap: $defaultGap;
+  @include phone {
+    gap: $phoneGap;
+  }
 
   ul {
     display: flex;
     gap: $hugeGap;
     margin-bottom: 2.5rem;
+    @include tab {
+      flex-wrap: wrap;
+      gap: $defaultGap;
+      align-items: center;
+      justify-content: center;
+    }
+    @include miniPhone {
+      gap: $phoneGap;
+      margin-bottom: .5rem;
+      align-items: center;
+      justify-content: center;
+    }
+    
   }
 
   .container {
@@ -18,5 +34,14 @@
     @include flexCenter;
     flex-wrap: wrap;
     gap: $defaultGap;
+
+    @include tab {
+      gap: $defaultGap;
+    }
+
+    @include phone {
+      width: 100%;
+      gap: $phoneGap;
+    }
   }
 }

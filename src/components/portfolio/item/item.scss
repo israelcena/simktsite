@@ -8,6 +8,13 @@
   position: relative;
   overflow: hidden;
   transition: $defaultTransition;
+  @include tab {
+    max-width: 26rem;
+  }
+  @include phone {
+    height: 16rem;
+    max-width: 16rem;
+  }
 
   h3 {
     text-align: center;
@@ -26,6 +33,9 @@
     h3 {
       color: whitesmoke;
       transform: translateY(-50%);
+      @include phone {
+        font-size: 2rem;
+      }
     }
 
     img {
@@ -35,8 +45,11 @@
 
   img {
     height: 18rem;
-    object-fit: cover;
+    object-fit: contain;
     z-index: 1;
     transition: $defaultTransition;
+    @include phone {
+      height: 100%;
+    }
   }
 }
