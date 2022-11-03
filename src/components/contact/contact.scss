@@ -17,7 +17,10 @@
       align-items: flex-start;
       flex: 0.85;
     }
-    
+    @include miniPhone {
+      display: none;
+    }
+
     img {
       height: 100%;
       @include tab {
@@ -34,9 +37,10 @@
     flex-direction: column;
     @include phone {
       flex: 1.15;
-    }
-    @include phone {
       text-align: center;
+    }
+    @include miniPhone {
+      padding: 0 2rem;
     }
 
     form {
@@ -48,7 +52,7 @@
         flex-wrap: wrap;
         align-items: flex-start;
       }
-      
+
       :nth-child(n) {
         font-size: 1.5rem;
       }
@@ -67,7 +71,8 @@
         color: $gray;
       }
 
-      input, textarea {
+      input,
+      textarea {
         width: 40vw;
         padding: 2rem 1rem;
         border: none;
@@ -95,7 +100,7 @@
         border-radius: 0.75rem;
       }
       span {
-        @include phone{
+        @include phone {
           flex: 2;
           background-color: red;
         }
