@@ -2,10 +2,9 @@
 
 .works {
   background-color: $tertiaryColor;
-  @include flexCenter;  
+  @include flexCenter;
   position: relative;
   overflow: hidden;
-  
 
   .slider {
     height: 70vh;
@@ -23,9 +22,8 @@
 
     .container {
       width: 100vw;
-      @include flexCenter;  
+      @include flexCenter;
     }
-
   }
 
   .arrow {
@@ -34,9 +32,6 @@
     color: whitesmoke;
     z-index: 2;
     font-size: 5rem;
-    // @include phone {
-    //   top: 2%;
-    // }
 
     &.left {
       left: 7%;

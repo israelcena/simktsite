@@ -19,7 +19,7 @@
     height: 100%;
     @include flexCenter;
 
-    .leftContainer{
+    .leftContainer {
       max-width: 35rem;
       padding: 2.5rem;
       display: flex;
@@ -45,10 +45,16 @@
 
       h3 {
         font-size: 2.5rem;
+        @include miniPhone {
+          font-size: 2rem;
+        }
       }
 
       p {
         font-size: 1.5rem;
+        @include miniPhone {
+          font-size: 1.2rem;
+        }
       }
 
       span {
@@ -57,14 +63,13 @@
         cursor: pointer;
         text-decoration: none;
 
-        &:hover{
+        &:hover {
           text-decoration: underline;
         }
       }
     }
+  }
 
-  } 
-  
   .right {
     flex: 8;
     height: 100%;
@@ -91,8 +96,6 @@
       @include miniPhone {
         max-width: 15rem;
       }
-     
     }
   }
-
 }
