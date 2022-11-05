@@ -18,7 +18,13 @@ export default function Contact() {
         <h2>Contato</h2>
         <h4>Quer alavancar seus resultados assim como nossos clientes?</h4>
         <p>Nosso telefone / whatsapp: 22 98765-2121</p>
-        <form onSubmit={handleSubmit} method="POST" netlify>
+        <form
+          name="contact"
+          method="POST"
+          data-netlify-recaptcha="true"
+          data-netlify="true"
+        >
+          <input type="hidden" name="form-name" value="name_of_my_form" />
           <input
             type="text"
             name="name"
@@ -45,6 +51,7 @@ export default function Contact() {
             placeholder="Faça um pequeno resumo do que você precisa."
             required
           ></textarea>
+          <div data-netlify-recaptcha="true"></div>
           <button type="submit">Enviar</button>
           {message ? (
             <span>
