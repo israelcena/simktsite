@@ -3,10 +3,28 @@ import contactImage from "../../images/contactPhoto/contact.jpg";
 import "./contact.scss";
 
 export default function Contact() {
+  function encode(data) {
+    return Object.keys(data)
+      .map(
+        (key) =>
+          encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+      )
+      .join("&");
+  }
+
   const [message, setMessage] = useState(false);
   const handleSubmit = (e) => {
     e.preventDefault();
-    setMessage(true);
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({
+        "form-name": e.target.getAttribute("name"),
+        ...arguments,
+      }),
+    })
+      .then(() => setMessage(true))
+      .catch((error) => alert(error));
   };
 
   return (
