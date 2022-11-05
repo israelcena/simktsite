@@ -1,13 +1,13 @@
-// import { useState } from "react";
+import { useState } from "react";
 import contactImage from "../../images/contactPhoto/contact.jpg";
 import "./contact.scss";
 
 export default function Contact() {
-  // const [message, setMessage] = useState(false);
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   setMessage(true);
-  // };
+  const [message, setMessage] = useState(false);
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setMessage(true);
+  };
 
   return (
     <section className="contact" id="contact">
@@ -19,6 +19,7 @@ export default function Contact() {
         <h4>Quer alavancar seus resultados assim como nossos clientes?</h4>
         <p>Nosso telefone / whatsapp: 22 98765-2121</p>
         <form
+          onSubmit={handleSubmit}
           name="contact"
           method="POST"
           data-netlify-recaptcha="true"
@@ -53,13 +54,13 @@ export default function Contact() {
           ></textarea>
           <div data-netlify-recaptcha="true"></div>
           <button type="submit">Enviar</button>
-          {/* {message ? (
+          {message ? (
             <span>
               Obrigado pelo contato!
               <br />
               Em breve retonaremos.
             </span>
-          ) : null} */}
+          ) : null}
         </form>
       </div>
     </section>
