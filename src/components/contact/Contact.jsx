@@ -18,7 +18,7 @@ export default function Contact() {
         <h2>Contato</h2>
         <h4>Quer alavancar seus resultados assim como nossos clientes?</h4>
         <p>Nosso telefone / whatsapp: 22 98765-2121</p>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} method="POST" netlify>
           <input
             type="text"
             name="name"
