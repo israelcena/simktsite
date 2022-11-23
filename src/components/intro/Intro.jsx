@@ -29,12 +29,12 @@ export default function Intro() {
       <div className="overlay"></div>
       <div className="right">
         <div className="wrapper">
-          <h2>Olá, Somos a</h2>
-          <h1>SI Marketing</h1>
+          <div className="mainText">
+            <h2>Olá, Somos a</h2>
+            <h1>SI Marketing</h1>
+          </div>
           <h3>
-            <span>Cuidamos</span> para sua
-            <br />
-            empresa os seus
+            <span>Cuidamos</span> para sua empresa os seus
             <br />
             <span ref={textRef}></span>
           </h3>
