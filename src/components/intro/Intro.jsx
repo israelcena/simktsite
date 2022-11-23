@@ -39,6 +39,8 @@ export default function Intro() {
             <span ref={textRef}></span>
           </h3>
         </div>
+      </div>
+      <div className="downBtn">
         <a href="#portfolio">
           <IoIosArrowDown />
         </a>

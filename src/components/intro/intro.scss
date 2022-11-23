@@ -1,7 +1,7 @@
 @import "../../index.scss";
 
 .intro {
-  // display: flex;
+  position: relative;
   @include tab {
     position: relative;
     flex-direction: column-reverse;
@@ -28,7 +28,6 @@
   }
 
   .right {
-    // flex: 0.45;
     position: absolute;
     top: 30vh;
     left: 50%;
@@ -51,7 +50,6 @@
         gap: $defaultGap;
         align-items: baseline;
       }
-
       @include tab {
         padding-left: 0;
         align-items: center;
@@ -141,30 +139,23 @@
         }
       }
     }
+  }
+  .downBtn {
+    position: absolute;
+    color: white;
+    bottom: 0;
+    left: 50%;
+    font-size: 6rem;
+    animation: arrowBlink 1.8s infinite;
 
-    a {
-      position: absolute;
-      bottom: 0;
-      left: 40%;
-      font-size: 6rem;
-      animation: arrowBlink 1.8s infinite;
-      @include tab {
-        display: none;
-      }
-      // @include phone {
-      //   font-size: 4rem;
-      // }
-      // @include miniPhone {
-      //   left: 1rem;
-      //   top: 1rem;
-      //   font-size: 4rem;
-      // }
-
-      @keyframes arrowBlink {
-        100% {
-          opacity: 0;
-          transform: translateY(12.5%);
-        }
+    @include tab {
+      display: none;
+    }
+    
+    @keyframes arrowBlink {
+      100% {
+        opacity: 0;
+        transform: translateY(12.5%);
       }
     }
   }
