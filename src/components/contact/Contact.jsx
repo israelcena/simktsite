@@ -35,7 +35,7 @@ export default function Contact() {
       <div className="right">
         <h2>Contato</h2>
         <h4>Quer alavancar seus resultados assim como nossos clientes?</h4>
-        <p>Nosso telefone / whatsapp: 22 98765-2121</p>
+        <p>Nosso telefone / whatsapp: 22 99924-5355</p>
         <form
           onSubmit={handleSubmit}
           name="contact"
