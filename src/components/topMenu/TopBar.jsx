@@ -4,7 +4,7 @@ import ToggleMenu from "./toggleMenu/ToggleMenu";
 import { useCallback, useState } from "react";
 
 import "./topBar.scss";
-import logoImage from "../../images/logoredondo.svg";
+import logoImage from "../../images/marca.svg";
 import Menu from "./menu/Menu";
 
 export default function TopBar() {
@@ -24,7 +24,7 @@ export default function TopBar() {
           <div className="items">
             <div className="item-container">
               <BsWhatsapp className="icon" />
-              <span>22 98803-7449</span>
+              <span>22 99924-5355</span>
             </div>
             <div className="item-container">
               <BsMailbox className="icon" />
