@@ -1,7 +1,7 @@
 @import "../../index.scss";
 
 .intro {
-  display: flex;
+  // display: flex;
   @include tab {
     position: relative;
     flex-direction: column-reverse;
@@ -10,49 +10,30 @@
     height: calc(100vh - 7rem) !important;
   }
 
-  .left {
-    flex: 0.55;
-    user-select: none;
-    overflow: hidden;
-    position: relative;
-    @include tab {
-      align-items: flex-start;
-    }
-
-    .imgContainer {
-      height: 85.5rem;
-      width: 85.5rem;
-      margin-top: 1rem;
-      background-color: $secondColor;
-      border-radius: 50%;
-      @include flexCenter;
-      float: right;
-      @include tab {
-        height: 70rem;
-        width: 70rem;
-      }
-      @include miniPhone {
-        height: 40rem;
-        max-width: 100vw;
-      }
-
-      img {
-        position: absolute;
-        bottom: 0;
-        height: 100%;
-        @include tab {
-          position: relative;
-        }
-        @include miniPhone {
-          bottom: 3rem;
-        }
-      }
+  .bg-video {
+    video {
+      width: 100%;
+      height: 100vh;
+      object-fit: cover;
     }
   }
 
+  .overlay {
+    width: 100%;
+    height: calc(100vh - 7rem);
+    top: 0;
+    left: 0;
+    position: absolute;
+    background-color: rgba($color: #000000, $alpha: 0.5);
+  }
+
   .right {
-    flex: 0.45;
-    position: relative;
+    // flex: 0.45;
+    position: absolute;
+    top: 30vh;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
     @include tab {
       position: static;
     }

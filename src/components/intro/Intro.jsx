@@ -1,6 +1,5 @@
 import "./intro.scss";
-import mainImage from "../../images/salesperson.png";
-// import miniMainImage from "../../images/salespersonsm.png";
+import mainVideo from "../../images/video.mp4";
 import { IoIosArrowDown } from "react-icons/io";
 import { init } from "ityped";
 import { useEffect, useRef } from "react";
@@ -24,12 +23,10 @@ export default function Intro() {
   }, []);
   return (
     <main className="intro" id="intro">
-      <div className="left">
-        <div className="imgContainer">
-          <img src={mainImage} alt="SI Marketing Client" />
-        </div>
+      <div className="bg-video">
+        <video src={mainVideo} type="video/mp4" autoPlay muted loop />
       </div>
-
+      <div className="overlay"></div>
       <div className="right">
         <div className="wrapper">
           <h2>Olá, Somos a</h2>
