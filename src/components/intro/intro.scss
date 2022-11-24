@@ -2,19 +2,15 @@
 
 .intro {
   position: relative;
-  @include tab {
-    position: relative;
-    flex-direction: column-reverse;
-    align-items: center;
-    scroll-margin-top: 7rem !important;
-    height: calc(100vh - 7rem) !important;
-  }
 
   .bg-video {
     video {
       width: 100%;
       height: 100vh;
       object-fit: cover;
+      @include phone {
+        object-position: right;
+      }
     }
   }
 
@@ -25,6 +21,9 @@
     left: 0;
     position: absolute;
     background-color: rgba($color: #000000, $alpha: 0.5);
+    @include phone {
+      background-color: rgba($color: #000000, $alpha: 0.8);
+    }
   }
 
   .right {
@@ -33,9 +32,6 @@
     left: 50%;
     transform: translateX(-50%);
     color: white;
-    @include tab {
-      position: static;
-    }
 
     .wrapper {
       width: 100%;
@@ -49,21 +45,18 @@
         display: flex;
         gap: $defaultGap;
         align-items: baseline;
-      }
-      @include tab {
-        padding-left: 0;
-        align-items: center;
-      }
-      @include phone {
-        padding: 1rem;
-        padding-top: 2rem;
-        justify-content: flex-start;
-        align-items: center;
-      }
-      @include miniPhone {
-        padding: 1rem;
-        justify-content: flex-start;
-        align-items: center;
+
+        @include tab {
+          width: 90vw;
+          justify-content: center;
+        }
+        
+        @include phone {
+          // width: 90vw;
+          // justify-content: center;
+          flex-direction: column;
+          gap: 0;
+        }
       }
 
       h1 {
@@ -75,7 +68,7 @@
           font-size: 4rem;
         }
         @include phone {
-          font-size: 3rem;
+          font-size: 3.5rem;
         }
       }
 
@@ -92,23 +85,26 @@
       h3 {
         font-size: 3rem;
         letter-spacing: 0.5px;
+
         @include tab {
-          font-size: 4rem;
+          text-align: center;
         }
+        
         @include phone {
-          font-size: 2.5rem;
+          font-size: 2rem;
+          text-align: start;
         }
 
         span {
           color: $mainColor;
           font-weight: 800;
           font-size: inherit;
-          @include phone {
-            &:nth-child(2n) {
-              position: absolute;
-              display: block;
-            }
-          }
+          // @include phone {
+          //   &:nth-child(2n) {
+          //     position: absolute;
+          //     display: block;
+          //   }
+          // }
         }
 
         .ityped-cursor {
@@ -147,11 +143,7 @@
     left: 50%;
     font-size: 6rem;
     animation: arrowBlink 1.8s infinite;
-
-    @include tab {
-      display: none;
-    }
-    
+   
     @keyframes arrowBlink {
       100% {
         opacity: 0;
